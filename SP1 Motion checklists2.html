@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        .tab {
+          float: left;
+          border: 1px solid #ccc;
+          background-color: AliceBlue;
+          width: 30%;
+          height: 300px;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          display: block;
+          background-color: inherit;
+          color: black;
+          padding: 22px 16px;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          cursor: pointer;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+          background-color: LightSkyBlue;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          float: left;
+          padding: 0px 12px;
+          border: 1px solid #ccc;
+          width: 70%;
+          border-left: none;
+          height: 300px;
+          display: none;
+        }
+
+        /* Clear floats after the tab */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+    </style>
+</head>
+<body>
+
+<h2>SP1 Motion Checklists</h2>
+<p>Move the mouse over a button inside the tabbed menu:</p>
+
+<div class="tab">
+    <button class="tablinks" onmouseover="openCity(event, 'SP1a Vectors and scalars')">SP1a Vectors and scalars</button>
+    <button class="tablinks" onmouseover="openCity(event, 'SP1b Distance/time graphs')">SP1b Distance/time graphs</button>
+    <button class="tablinks" onmouseover="openCity(event, 'SP1c Acceleration')">SP1c Acceleration</button>
+    <button class="tablinks" onmouseover="openCity(event, 'SP1d Velocity/time graphs')">SP1d Velocity/time graphs</button>
+</div>
+
+<div id="SP1a Vectors and scalars" class="tabcontent">
+        <p>Describe the difference between weight and mass.</p>
+        <p>Explain the difference between a vector and a scalar quantity.</p>
+        <p>Describe the difference between displacement and distance.</p>
+        <p>Describe the difference between velocity and speed.</p>
+        <p>Define the terms: acceleration, force, momentum, energy.</p>
+</div>
+
+<div id="SP1b Distance/time graphs" class="tabcontent">
+        <p>Recall and use equations relating distance, speed and time.</p>
+        <p>Describe how speed can be measured in a school laboratory.</p>
+        <p>Recall typical speeds for walking, running, cycling and travelling by car.</p>
+        <p>Interpret distance/time graphs (including recognising what the steepness of the line tells you).</p>
+        <p>Represent journeys on distance/time graphs.</p>
+        <p>Determine speed from the gradient of a distance/time graph.</p>
+</div>
+
+<div id="SP1c Acceleration" class="tabcontent">
+        <p>Recall the formula relating acceleration, velocity and time.</p>
+        <p>Use the formula relating acceleration, velocity and time.</p>
+        <p>Recall the equation relating acceleration, velocity and distance.</p>
+        <p>Use the equation relating acceleration, velocity and distance.</p>
+        <p>Recall the acceleration in free fall.</p>
+        <p>Estimate the magnitudes of some everyday accelerations.</p>
+</div>
+
+<div id="SP1d Velocity/time graphs" class="tabcontent">
+        <p>Represent journeys on velocity/time graphs.</p>
+        <p>Interpret velocity/time graphs qualitatively.</p>
+        <p>Calculate uniform accelerations from the gradients of velocity/time graphs.</p>
+        <p>Determine the distance travelled from the area under a velocity/time graph.</p>
+</div>
+
+<div class="clearfix"></div>
+
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>
