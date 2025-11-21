@@ -6,25 +6,50 @@
     <link rel="stylesheet" href="stylepage2.css">
 <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <style>
+        .exam-dates{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+        margin: 1rem;
+        margin-bottom: auto;
+        margin-top: 10vh;
+        }
+
       p {
         text-align: center;
         color: #810541;
         font-size: 50px;
         margin-top: 0px;
+        margin: 0;
+        @media (max-width: 800px){
+            font-size: 28px;
+            }
         }
       h2 {
         color: #474973;
         text-align: center;
         font-size: 60px;
         font-weight: 800;
+        margin: 0;
+        @media (max-width: 800px){
+            font-size: 36px;
+            }
         }
       h1 {
         color: #474973;
+        font-size: 25px;
+        margin: 0;
+        margin-top: 1rem;
+        @media (max-width: 800px){
+            font-size: 18px;
+            }
         }
       h3 {
         text-align: center;
         color: #474973;
         font-size: 20px;
+        margin: 0;
         }
 <!--        body {-->
 <!--          font-family: Arial, Helvetica, sans-serif;-->
@@ -200,12 +225,24 @@
 <!--        </div>-->
 <!--    </div>-->
 </div>
-
 <h1>GCSE Triple Physics</h1>
-<h2>Paper 1</h2>
-<h3>Tuesday, 2nd June 2026</h3>
+<div class="exam-dates">
 
-<p id="demo"></p>
+    <div class="paper-one">
+
+        <h2>Paper 1</h2>
+        <h3>Tuesday, 2nd June 2026</h3>
+
+        <p id="demo"></p>
+    </div>
+    <div class="paper-two">
+        <h2>Paper 2</h2>
+        <h3>Monday, 15th June 2026</h3>
+
+        <p id="demo2"></p>
+    </div>
+</div>
+
 
 <script>
     // Set the date we're counting down to
@@ -268,10 +305,7 @@
       }
     }, 1000);
 </script>
-<h2>Paper 2</h2>
-<h3>Monday, 15th June 2026</h3>
 
-<p id="demo2"></p>
 
 </body>
 </html>
