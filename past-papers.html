@@ -18,13 +18,18 @@
         .main {
           max-width: 1000px;
           margin: auto;
+          @media (max-width: 800px){
+            font-size: 15px;
         }
 
         h1 {
-          font-size: 50px;
+          font-size: 30px;
           word-break: break-all;
         }
 
+        .row {
+          margin: 20px;
+        }
         .row {
           margin: 10px -16px;
         }
@@ -33,14 +38,24 @@
         .row,
         .row > .column {
           padding: 8px;
+        @media (max-width: 800px) {
+            padding: 15px;
+            }
         }
 
         /* Create three equal columns that floats next to each other */
         .column {
           float: left;
-          width: 33.33%;
-          Height: 45vh;
+          width: 20%;
+          Height: 35vh;
           display: none; /* Hide all elements by default */
+          @media (max-width: 800px) {
+          width: 90%;
+          }
+          @media (max-width: 800px) {
+            height: 30vh;
+            }
+
         }
 
         /* Clear floats after rows */
@@ -48,14 +63,18 @@
           content: "";
           display: table;
           clear: both;
+
         }
 
         /* Content */
         .content {
           background-color: #E1D9E1;
           padding: 10px;
-          height: 40vh;
+          height: 30vh;
           border-radius: 10px;
+          @media (max-width: 800px) {
+            margin: 15px;
+            }
         }
 
         /* The "show" class is added to the filtered elements */
