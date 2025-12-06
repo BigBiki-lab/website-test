@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcardsbigbangandsteadystatetheories</title>
+    <link rel="stylesheet" href="flashcardsbigbangandsteadystatetheories.css">
+</head>
+<body>
+<h1>Big Bang and Steady State Theory</h1>
+<div id="flashcard-container"></div>
+</body>
+<script>
+    const flashcards = [
+    { question: "What is the Big Bang Theory?", answer: "The Big Bang Theory suggests that the universe began as a singularity, a point of infinite density and temperature, around 13.8 billion years ago. It then expanded and continues to expand, leading to the universe we see today." },
+    { question: "What evidence supports the Big Bang Theory?", answer: "Cosmic Microwave Background Radiation (CMBR): This is the faint glow left over from the Big Bang. Redshift of galaxies: Galaxies are moving away from us, indicating the universe is expanding." },
+    { question: "What is the Steady State Theory?", answer: "The Steady State Theory proposed that the universe has no beginning or end and is always in a constant state. As it expands, new matter is created to maintain a constant average density." },
+    { question: "How do the Big Bang Theory and Steady State Theory differ in their explanation of the universe's origin?", answer: "Big Bang Theory: The universe had a beginning, starting from a singularity about 13.8 billion years ago, and has been expanding ever since. Steady State Theory: The universe has no beginning or end; it has always existed in a steady state, with new matter constantly created as it expands." },
+    { question: "How do the Big Bang Theory and Steady State Theory explain the expansion of the universe?", answer:"Big Bang Theory: The universe is expanding from a hot, dense beginning and continues to grow, with galaxies moving away from each other. Steady State Theory: The universe is always expanding, but the creation of new matter keeps the overall density of the universe constant, meaning it doesn't change over time." },
+    { question: "What evidence contradicts the Steady State Theory?", answer:"Cosmic Microwave Background Radiation (CMBR): This was predicted by the Big Bang Theory and was later observed, which contradicts the Steady State Theory. Galactic evolution: The Steady State Theory cannot explain why galaxies change over time, as we observe galaxies in different stages of development." },
+    { question: "What is cosmic microwave background radiation (CMBR)?", answer:"It is faint microwave radiation left over from the early universe, considered strong evidence for the Big Bang." },
+    { question: "Why does redshift support the Big Bang Theory?", answer:"Redshift shows that galaxies are moving away from us, meaning the universe is expanding — a key Big Bang prediction." },
+    ];
+
+    const container = document.getElementById("flashcard-container");
+
+    flashcards.forEach((cardData) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+    <div class="card-inner">
+        <div class="card-front">${cardData.question}</div>
+        <div class="card-back">${cardData.answer}</div>
+    </div>
+    `;
+
+    card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+    });
+
+    container.appendChild(card);
+    });
+</script>
+</html>
