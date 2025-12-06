@@ -13,6 +13,7 @@ body {
           background-color: #0d0c1d;
           overflow-x: hidden;
           padding-top: 100px;
+
         }
 
         /* Style the sidenav links and the dropdown button */
@@ -53,6 +54,7 @@ body {
           display: none;
           background-color: #36013;
           padding-right: 40px;
+          padding-bottom: 80px;
         }
 
         /* Optional: Style the caret down icon */
@@ -62,9 +64,11 @@ body {
         }
 
         /* Some media queries for responsiveness */
-        @media screen and (max-height: 450px) {
+        @media screen and (max-height: 700px) {
           .sidenav {padding-top: 15px;}
           .sidenav a {font-size: 18px;}
+          .sidenav {padding-bottom: 15px;}
+
         }
 
         h1 {
