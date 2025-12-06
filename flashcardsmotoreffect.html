@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcardsmotoreffect</title>
+    <link rel="stylesheet" href="flashcardsbigbangandsteadystatetheories.css">
+</head>
+<body>
+<h1>Motor Effect</h1>
+<div id="flashcard-container"></div>
+</body>
+<script>
+    const flashcards = [
+    { question: "What is the motor effect?", answer: "The force experienced by a current-carrying wire in a magnetic field." },
+    { question: "What does the direction of the force in the motor effect depend on?", answer: "The direction of the current, the magnetic field, and the angle between them." },
+    { question: "What is the formula for the force on a current-carrying wire in a magnetic field?", answer: "F = BIL; Where: F = force (N); B = magnetic flux density (T); I = current (A); L = length of wire in the magnetic field (m)" },
+    { question: "How can you determine the direction of the force in the motor effect?", answer: "Use the Fleming’s Left Hand Rule: Thumb = Force; First finger = Magnetic field (north to south); Second finger = Current (positive to negative)" },
+    { question: "What happens when you increase the current in the motor effect?", answer:"The force on the wire increases." },
+    { question: "What happens if you reverse the direction of the current in the motor effect?", answer:"The direction of the force reverses." },
+    { question: "How does the magnetic field strength (B) affect the force in the motor effect?", answer:"A stronger magnetic field produces a larger force." },
+    { question: "What is an example of the motor effect in everyday life?", answer:"The operation of electric motors, such as in fans, washing machines, or electric cars." },
+    ];
+
+    const container = document.getElementById("flashcard-container");
+
+    flashcards.forEach((cardData) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+    <div class="card-inner">
+        <div class="card-front">${cardData.question}</div>
+        <div class="card-back">${cardData.answer}</div>
+    </div>
+    `;
+
+    card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+    });
+
+    container.appendChild(card);
+    });
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcardsredshift</title>
+    <link rel="stylesheet" href="flashcardstyle.css">
+</head>
+<body>
+<h1>Red shift</h1>
+<div id="flashcard-container"></div>
+</body>
+<script>
+    const flashcards = [
+    { question: "What is red shift?", answer: "The increase in wavelength of light from an object moving away from us, making the light shift towards the red end of the spectrum." },
+    { question: "What does red shift tell us about galaxies?", answer: "Most galaxies are moving away from us." },
+    { question: "What does a greater red shift mean?", answer: "The galaxy is moving away faster." },
+    { question: "How does red shift provide evidence for the Big Bang?", answer: "It shows the universe is expanding, suggesting it began from a single, extremely small and dense point." },
+    { question: "What is the Doppler effect in light?", answer:"Light waves stretch (red shift) if the source moves away, or compress (blue shift) if it moves towards us." },
+    { question: "What part of the electromagnetic spectrum is red light?", answer:"Long-wavelength, low-frequency light." },
+    { question: "What is blue shift?", answer:"A decrease in wavelength when an object moves towards us." },
+    { question: "What is the overall conclusion astronomers draw from red-shift observations?", answer:"The universe is expanding, and distant galaxies are receding in all directions." },
+    ];
+
+    const container = document.getElementById("flashcard-container");
+
+    flashcards.forEach((cardData) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+    <div class="card-inner">
+        <div class="card-front">${cardData.question}</div>
+        <div class="card-back">${cardData.answer}</div>
+    </div>
+    `;
+
+    card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+    });
+
+    container.appendChild(card);
+    });
+</script>
+</html>
