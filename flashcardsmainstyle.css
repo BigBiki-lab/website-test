@@ -12,7 +12,7 @@ body {
           left: 0;
           background-color: #0d0c1d;
           overflow-x: hidden;
-          padding-top: 20px;
+          padding-top: 100px;
         }
 
         /* Style the sidenav links and the dropdown button */
@@ -25,7 +25,6 @@ body {
           border: none;
           background: none;
           width: 100%;
-          text-align: left;
           cursor: pointer;
           outline: none;
           text-align: center;
@@ -53,7 +52,7 @@ body {
         .dropdown-container {
           display: none;
           background-color: #36013;
-          padding-left: 8px;
+          padding-right: 40px;
         }
 
         /* Optional: Style the caret down icon */
