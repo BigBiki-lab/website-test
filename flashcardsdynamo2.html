@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcardsdynamo2</title>
+    <link rel="stylesheet" href="flashcardstyle.css">
+</head>
+<body>
+<h1>Dynamo 2</h1>
+<div id="flashcard-container"></div>
+</body>
+<script>
+    const flashcards = [
+    { question: "How can the output voltage of a dynamo be increased?", answer: "Increase rotation speed or magnetic field strength." },
+    { question: "What happens if the dynamo stops rotating?", answer: "No voltage is induced." },
+    { question: "Where are dynamos commonly used?", answer: "Bicycle lights." },
+    { question: "What is the key difference between a dynamo and an alternator?", answer: "A dynamo produces DC, an alternator produces AC." },
+    { question: "Why are carbon brushes made of carbon?", answer:"Carbon conducts electricity and reduces friction." },
+    { question: "What happens to the induced voltage if the dynamo spins faster?", answer:"The induced voltage increases." },
+    { question: "What would happen without a split-ring commutator?", answer:"The current would alternate direction." },
+    { question: "Why does a dynamo need a magnetic field?", answer:"To induce a voltage in the coil." },
+    ];
+
+    const container = document.getElementById("flashcard-container");
+
+    flashcards.forEach((cardData) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+    <div class="card-inner">
+        <div class="card-front">${cardData.question}</div>
+        <div class="card-back">${cardData.answer}</div>
+    </div>
+    `;
+
+    card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+    });
+
+    container.appendChild(card);
+    });
+</script>
+</html>

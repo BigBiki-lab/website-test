@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcardsloudspeaker1</title>
+    <link rel="stylesheet" href="flashcardstyle.css">
+</head>
+<body>
+<h1>Loudspeaker 1</h1>
+<div id="flashcard-container"></div>
+</body>
+<script>
+    const flashcards = [
+    { question: "What is a loudspeaker?", answer: "A device that converts electrical energy into sound energy." },
+    { question: "What energy change occurs in a loudspeaker?", answer: "Electrical → sound." },
+    { question: "What type of current is used in a loudspeaker?", answer: "Alternating current (AC)." },
+    { question: "What happens when a current flows through the speaker coil?", answer: "A magnetic field is produced." },
+    { question: "What two magnetic fields interact in a loudspeaker?", answer:"The coil’s field and the permanent magnet’s field." },
+    { question: "What force acts on the coil when current flows?", answer:"The motor effect force." },
+    { question: "What happens when the current direction changes?", answer:"The force on the coil reverses." },
+    { question: "Why does the coil vibrate?", answer:"The current constantly changes direction." },
+    ];
+
+    const container = document.getElementById("flashcard-container");
+
+    flashcards.forEach((cardData) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+    <div class="card-inner">
+        <div class="card-front">${cardData.question}</div>
+        <div class="card-back">${cardData.answer}</div>
+    </div>
+    `;
+
+    card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+    });
+
+    container.appendChild(card);
+    });
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcardsdynamo1</title>
+    <link rel="stylesheet" href="flashcardstyle.css">
+</head>
+<body>
+<h1>Dynamo 1</h1>
+<div id="flashcard-container"></div>
+</body>
+<script>
+    const flashcards = [
+    { question: "What is a dynamo?", answer: "A device that generates electricity using electromagnetic induction." },
+    { question: "What type of current does a dynamo produce?", answer: "Direct current (DC)." },
+    { question: "What energy change occurs in a dynamo?", answer: "Kinetic energy → electrical energy." },
+    { question: "What two main components are needed for a dynamo?", answer: "A magnetic field and a rotating coil." },
+    { question: "What part is used instead of slip rings in a dynamo?", answer:"A split-ring commutator." },
+    { question: "What is the function of the split-ring commutator?", answer:"To reverse connections every half turn to produce DC." },
+    { question: "What is the role of carbon brushes in a dynamo?", answer:"To transfer current to the external circuit." },
+    { question: "What happens to the current direction in a dynamo?", answer:"It stays the same direction." },
+    ];
+
+    const container = document.getElementById("flashcard-container");
+
+    flashcards.forEach((cardData) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+    <div class="card-inner">
+        <div class="card-front">${cardData.question}</div>
+        <div class="card-back">${cardData.answer}</div>
+    </div>
+    `;
+
+    card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+    });
+
+    container.appendChild(card);
+    });
+</script>
+</html>
