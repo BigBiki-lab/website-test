@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashcardselectromagneticinduction</title>
+    <link rel="stylesheet" href="flashcardstyle.css">
+</head>
+<body>
+<h1>Electromagnetic Induction</h1>
+<div id="flashcard-container"></div>
+</body>
+<script>
+    const flashcards = [
+    { question: "What happens when you move a wire in a magnetic field?", answer: "A voltage/current is induced in the wire." },
+    { question: "How can you induce an electric current in a coil of wire?", answer: "Move a magnet into it/move it over a magnet." },
+    { question: "What must change to induce a voltage?", answer: "The magnetic field or the motion of the conductor." },
+    { question: "How can you increase the induced voltage?", answer: "Move the magnet faster or use a stronger magnetic field." },
+    { question: "What happens if the magnet is stationary next to a coil?", answer:"No voltage is induced." },
+    { question: "What is the unit of induced voltage?", answer:"Volts (V)" },
+    { question: "What is the direction of the induced current determined by?", answer:"The direction of movement and the magnetic field direction." },
+    { question: "What happens to the induced voltage if the magnet is moved faster?", answer:"The induced voltage increases." },
+    ];
+
+    const container = document.getElementById("flashcard-container");
+
+    flashcards.forEach((cardData) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+    <div class="card-inner">
+        <div class="card-front">${cardData.question}</div>
+        <div class="card-back">${cardData.answer}</div>
+    </div>
+    `;
+
+    card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+    });
+
+    container.appendChild(card);
+    });
+</script>
+</html>
