@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ultrasound</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+    *{
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+h1{
+font-size: 3.5rem;
+font-family: 'Montserrat';
+font-weight: normal;
+color: #2E1A47;
+text-align: center;
+margin-top: 5rem;
+margin-bottom: 3.5rem;
+text-decoration-line: underline;
+@media (max-width: 800px){
+     font-size: 25px;
+     }
+}
+
+h2{
+font-size: 2.5rem;
+font-family: 'Montserrat';
+font-weight: normal;
+color: #2E1A47;
+text-align: center;
+margin-top: 2rem;
+margin-bottom: 1.0rem;
+@media (max-width: 800px){
+     font-size: 20px;
+     }
+}
+
+.wrapper{
+width: 90%;
+margin: 0 auto;
+max-width: 80rem;
+}
+
+.cols{
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+   justify-content: center;
+}
+
+.col{
+width: calc(25% - 2rem);
+margin: 1rem;
+margin-bottom: 20rem;
+cursor: pointer;
+}
+
+.container{
+-webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+-webkit-perspective: 1000px;
+     perspective: 1000px;
+}
+
+.front,
+.back{
+background-size: cover;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+border-radius: 10px;
+background-position: center;
+-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+-webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
+text-align: center;
+min-height: 280px;
+height: auto;
+border-radius: 10px;
+color: #fff;
+font-size: 2rem;
+}
+
+.back{
+background: #cedce7;
+background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+}
+
+.front:after{
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+width: 100%;
+height: 100%;
+content: '';
+display: block;
+/* opacity of the card */
+opacity: 1;
+/* front card colour */
+background-color: #36013F;
+-webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
+border-radius: 10px;
+}
+.container:hover .front,
+.container:hover .back{
+-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+}
+
+.inner{
+-webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+     transform: translateY(-50%) translateZ(60px) scale(0.94);
+top: 50%;
+position: absolute;
+left: 0;
+width: 100%;
+padding: 2rem;
+-webkit-box-sizing: border-box;
+     box-sizing: border-box;
+outline: 1px solid transparent;
+-webkit-perspective: inherit;
+     perspective: inherit;
+z-index: 2;
+}
+
+.container .back{
+-webkit-transform: rotateY(180deg);
+     transform: rotateY(180deg);
+-webkit-transform-style: preserve-3d;
+     transform-style: preserve-3d;
+}
+
+.container .front{
+-webkit-transform: rotateY(0deg);
+     transform: rotateY(0deg);
+-webkit-transform-style: preserve-3d;
+     transform-style: preserve-3d;
+}
+
+.container:hover .back{
+-webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+-webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+}
+
+.container:hover .front{
+-webkit-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+-webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+}
+
+.front .inner p{
+font-size: 1.8rem;
+margin-bottom: 2rem;
+position: relative;
+}
+
+.front .inner p:after{
+<!--  content: '';-->
+width: 4rem;
+height: 2px;
+position: absolute;
+background: #C6D4DF;
+display: block;
+left: 0;
+right: 0;
+margin: 0 auto;
+bottom: -.75rem;
+}
+
+.front .inner span{
+color: rgba(255,255,255,0.7);
+font-family: 'Montserrat';
+font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+.col{
+width: calc(33.333333% - 2rem);
+}
+}
+
+@media screen and (max-width: 48rem){
+.col{
+width: calc(50% - 2rem);
+}
+}
+
+@media screen and (max-width: 32rem){
+.col{
+width: 100%;
+margin: 0 0 2rem 0;
+}
+}
+
+h3 {
+ text-align: center;
+ color: #474973;
+ font-size: 40px;
+ margin-top: 180px;
+ @media (max-width: 800px){
+     font-size: 25px;
+     }
+ }
+h4 {
+ text-align: center;
+ color: #474973;
+ font-size: 40px;
+ margin-top: 10px;
+ margin-bottom: 500px;
+ @media (max-width: 800px){
+     font-size: 25px;
+     }
+ }
+h5 {
+ text-align: center;
+ color: #474973;
+ font-size: 40px;
+ margin-top: 10px;
+ margin-bottom: 50px;
+ @media (max-width: 800px){
+     font-size: 25px;
+     }
+ }
+img {
+ width: 900px;
+ margin-top: 50px;
+ margin-bottom: 130px;
+ @media (max-width: 800px){
+     width: 100%;
+     }
+ }
+div.center {
+ text-align: center;
+ margin-top: 300px;
+ margin-bottom: 300px;
+
+@media (max-width: 600px) {iframe {
+      width: auto;
+      height: auto;
+      }
+ }
+ }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>Ultrasound</h1>
+    <h2>Learning objective: H How is ultrasound used to look inside our bodies?</h2>
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What is sound?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Vibrations (compressions and rarefactions) of air that the human ear can detect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>How does sound travel?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>In longitudinal waves through gas, liquids and solids.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What changes the pitch of sound?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>Frequency, number of waves per second.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What is ultrasound?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>sound with frequencies higher than 20000 Hz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-1.png" alt="hearing range">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-2.png" alt="MCQ past paper question">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-3.png" style=" width: 100%;" alt="Past paper question">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-4.png" style=" width: 80%; padding-bottom: 100px;" alt="Past paper question answer">
+</div>
+
+<div style=" text-align: left;">
+    <img src="images/lesson-ultrasound-7.png" style=" width: 30%; margin-bottom: 10px;" alt="question mark">
+</div>
+
+<h2 style=" padding-bottom: 400px;"  >What does SONAR stand for?</h2>
+
+<h2><span style="color: red;">Answer:</span>SOund Navigation And Ranging</h2>
+
+<h3>Describe how sonar works.</h3>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-5.png" style=" width: 40%;" alt="Boat with the sonar">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-6.png" style=" width: 80%;" alt="text about sonar">
+</div>
+
+<div style=" text-align: left;">
+    <img src="images/lesson-ultrasound-7.png" style=" width: 30%; margin-bottom: 10px;" alt="question mark">
+</div>
+
+<h2 style=" margin-bottom: 350px;">Why is ultrasound used for investigating the sea floor rather than light?</h2>
+
+<h2><span style="color: red;">Answer:</span>Light does not travel very far through water.</h2>
+
+<div style=" text-align: left;">
+    <img src="images/lesson-ultrasound-8.png" style=" width: 10%; margin-bottom: 10px; margin-top: 200px; margin-left: 50px;" alt="I do">
+</div>
+
+<h2 style=" padding-left: 100px; padding-right: 100px; padding-bottom: 500px;"  >The speed of sound in sea water is 1500 m/s. The sonar equipment on a boat receives an echo  0.01 s after the ultrasound pulse was sent out. Calculate the depth of the water.</h2>
+
+<div style=" text-align: left;">
+    <img src="images/lesson-ultrasound-9.png" style=" width: 10%; margin-bottom: 10px; margin-top: 200px; margin-left: 50px;" alt="we do">
+</div>
+
+<h2 style=" padding-left: 100px; padding-right: 100px; margin-bottom: 0.5rem;"  >A ship detects a sonar pulse 3 seconds after it was emitted. The speed of sound in sea water is 1500 m/s.</h2>
+
+<h2 style=" text-align: left; padding-left: 100px; padding-right: 100px; margin-top: 0.1rem; margin-bottom: 0.5rem;"> a) How far has the sound travelled?</h2>
+
+<h2 style=" text-align: left; padding-left: 100px; padding-right: 100px; margin-top: 0.1rem; padding-bottom: 500px;">b) How deep is the water?</h2>
+
+<div style=" text-align: left;">
+    <img src="images/lesson-ultrasound-10.png" style=" width: 20%; margin-bottom: 10px; margin-top: 200px; margin-left: 50px;" alt="you do">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-11.png" style=" width: 80%; margin-bottom: 10px; margin-top: 10px;" alt="past paper question">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-13.png" style=" width: 70%;margin-bottom: 10px; margin-top: 10px; " alt="past paper question">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-12.png"  style=" width: 40%; margin-top: 10px; margin-bottom: 10px;" alt="boat and sonar">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-17.png" style=" width: 40%; margin-top: 100px; margin-bottom: 20px;" alt="speed of sound">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-15.png" style=" width: 80%; margin-top: 10px;" alt="ultrasound scan">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-16.png" style=" width: 80%; margin-top: 10px;" alt="ultrasound scan">
+</div>
+
+<h3>Ultrasound scans</h3>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-14.png" style=" width: 80%; margin-top: 10px;" alt="ultrasound scan">
+</div>
+
+<div class="wrapper">
+    <h2>Ultrasound scans</h2>
+    <h2>Fill in the missing word/words in the sentence.</h2>
+
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>A _______ is used to stop the ultrasound just reflecting from the skin.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>gel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>The _________ emits and receives ultrasound waves.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>probe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>Some sound is ______________ when the ultrasound waves pass into a different medium.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>reflected</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>The ultrasound machine detects the ________ between sending the _________ out and receiving the echo.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>time, pulse</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<h2>Match the sentence halves and arrange them to explain how the fetal scanning works.</h2>
+<h2>Complete the work in your exercise book.</h2>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-18.png" style=" width: 80%; margin-top: 10px;" alt="ultrasound scan">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ultrasound-19.png" style=" width: 80%; margin-bottom: 300px; margin-top: 150px; " alt="ultrasound scan">
+</div>
+
+<div class="wrapper">
+    <h2>Ultrasound scans</h2>
+
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>Why is a gel used during an ultrasound scan?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>A gel is used to stop the ultrasound just reflecting from the skin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What is the purpose of the probe in an ultrasound scan?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>The probe emits and receives ultrasound waves.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What happens to some sound when it passes through different media?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>it reflects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What is an echo?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>An echo is a reflected sound wave.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0_hd08yYoXY?si=1ngmNKvFgf8C6EX_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+</body>
+</html>
