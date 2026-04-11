@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+    *{
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+h1{
+font-size: 3.5rem;
+font-family: 'Montserrat';
+font-weight: normal;
+color: #2E1A47;
+text-align: center;
+margin-top: 5rem;
+margin-bottom: 3.5rem;
+text-decoration-line: underline;
+@media (max-width: 800px){
+     font-size: 25px;
+     }
+}
+
+h2{
+font-size: 2.5rem;
+font-family: 'Montserrat';
+font-weight: normal;
+color: #2E1A47;
+text-align: center;
+margin-top: 2rem;
+margin-bottom: 1.0rem;
+@media (max-width: 800px){
+     font-size: 20px;
+     }
+}
+
+.wrapper{
+width: 90%;
+margin: 0 auto;
+max-width: 80rem;
+}
+
+.cols{
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+   justify-content: center;
+}
+
+.col{
+width: calc(25% - 2rem);
+margin: 1rem;
+margin-bottom: 20rem;
+cursor: pointer;
+}
+
+.container{
+-webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+-webkit-perspective: 1000px;
+     perspective: 1000px;
+}
+
+.front,
+.back{
+background-size: cover;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+border-radius: 10px;
+background-position: center;
+-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+-webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
+text-align: center;
+min-height: 280px;
+height: auto;
+border-radius: 10px;
+color: #fff;
+font-size: 2rem;
+}
+
+.back{
+background: #cedce7;
+background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+}
+
+.front:after{
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+width: 100%;
+height: 100%;
+content: '';
+display: block;
+/* opacity of the card */
+opacity: 1;
+/* front card colour */
+background-color: #36013F;
+-webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
+border-radius: 10px;
+}
+.container:hover .front,
+.container:hover .back{
+-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+}
+
+.inner{
+-webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+     transform: translateY(-50%) translateZ(60px) scale(0.94);
+top: 50%;
+position: absolute;
+left: 0;
+width: 100%;
+padding: 2rem;
+-webkit-box-sizing: border-box;
+     box-sizing: border-box;
+outline: 1px solid transparent;
+-webkit-perspective: inherit;
+     perspective: inherit;
+z-index: 2;
+}
+
+.container .back{
+-webkit-transform: rotateY(180deg);
+     transform: rotateY(180deg);
+-webkit-transform-style: preserve-3d;
+     transform-style: preserve-3d;
+}
+
+.container .front{
+-webkit-transform: rotateY(0deg);
+     transform: rotateY(0deg);
+-webkit-transform-style: preserve-3d;
+     transform-style: preserve-3d;
+}
+
+.container:hover .back{
+-webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+-webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+}
+
+.container:hover .front{
+-webkit-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+-webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+}
+
+.front .inner p{
+font-size: 1.8rem;
+margin-bottom: 2rem;
+position: relative;
+}
+
+.front .inner p:after{
+<!--  content: '';-->
+width: 4rem;
+height: 2px;
+position: absolute;
+background: #C6D4DF;
+display: block;
+left: 0;
+right: 0;
+margin: 0 auto;
+bottom: -.75rem;
+}
+
+.front .inner span{
+color: rgba(255,255,255,0.7);
+font-family: 'Montserrat';
+font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+.col{
+width: calc(33.333333% - 2rem);
+}
+}
+
+@media screen and (max-width: 48rem){
+.col{
+width: calc(50% - 2rem);
+}
+}
+
+@media screen and (max-width: 32rem){
+.col{
+width: 100%;
+margin: 0 0 2rem 0;
+}
+}
+
+h3 {
+ text-align: center;
+ color: #474973;
+ font-size: 40px;
+ margin-top: 180px;
+ @media (max-width: 800px){
+     font-size: 25px;
+     }
+ }
+h4 {
+ text-align: center;
+ color: #474973;
+ font-size: 40px;
+ margin-top: 10px;
+ margin-bottom: 500px;
+ @media (max-width: 800px){
+     font-size: 25px;
+     }
+ }
+h5 {
+ text-align: center;
+ color: #474973;
+ font-size: 40px;
+ margin-top: 10px;
+ margin-bottom: 50px;
+ @media (max-width: 800px){
+     font-size: 25px;
+     }
+ }
+img {
+ width: 900px;
+ margin-top: 50px;
+ margin-bottom: 130px;
+ @media (max-width: 800px){
+     width: 100%;
+     }
+ }
+div.center {
+ text-align: center;
+ margin-top: 300px;
+ margin-bottom: 300px;
+
+@media (max-width: 600px) {iframe {
+      width: auto;
+      height: auto;
+      }
+ }
+ }
+
+    a {
+             padding-top: 30px;
+             padding-bottom: 30px;
+             padding-left: 0;
+             padding-right: 0;
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+             margin-bottom: 80px;
+             margin-top: 80px;
+             font-size: 25px;
+             background-color: #008000;
+             width: 30%;
+             color: white;
+             @media (max-width: 600px){
+             font-size: 20px;
+             width: 100%;
+             }
+
+        }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>Colour</h1>
+    <h2>Learning objective: How do filters make coloured light?</h2>
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What does reflection mean?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>light/a wave bouncing off something</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What is the word for light changing direction when it goes from one material into a different material?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>refraction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What is the angle of incidence?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>angle between normal and incident/incoming light ray</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>What is a normal?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>line at right angles to a surface</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<h2 style=" padding-bottom: 600px;">Draw and label a ray diagram to show reflection of light from a plane mirror.</h2>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ray-diagrams-1.png" style=" width: 50%; margin-bottom: 50px;" alt="ray diagram relection">
+</div>
+
+<h2 style=" margin-top: 10px; padding-left: 100px; padding-right: 100px; "  >When waves are reflected, the angle of reflection is equal to the angle of incidence.</h2>
+<h2 style=" margin-top: 10px; padding-left: 100px; padding-right: 100px; padding-bottom: 500px;"  >This is called the <span style="color: red;">law of reflection</span>.</h2>
+
+<h2 style=" padding-bottom: 600px;">Draw and label a ray diagram to show the refraction of light from air into glass.</h2>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ray-diagrams-2.png" style=" width: 35%; margin-bottom: 150px;" alt="ray diagram relection">
+</div>
+
+<h2 style=" margin-top: 200px; padding-left: 100px; padding-right: 100px; "  >Light travels at different speeds in different materials.</h2>
+
+<h2 style=" margin-top: 10px; padding-left: 100px; padding-right: 100px; "  >It travels faster in air than it does in water or glass.</h2>
+
+<h2 style=" margin-top: 10px; padding-left: 100px; padding-right: 100px; "  >When a ray of light moves into a material where it travels at a different speed, it usually changes direction.</h2>
+
+<h2 style=" margin-top: 10px; padding-left: 100px; padding-right: 100px; "  >This is called <span style="color: red;">refraction</span>.</h2>
+
+<h2 style=" margin-top: 10px; padding-left: 100px; padding-right: 100px; margin-bottom: 300px; "  >When light meets the <span style="color: red;">interface</span> (boundary) at right angles to it (i.e. along the normal) there is no change in direction.</h2>
+
+<div style=" text-align: left;">
+    <img src="images/lesson-ultrasound-7.png" style=" width: 25%; margin-bottom: 10px;" alt="question mark">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ray-diagrams-3.png" style=" width: 80%; margin-bottom: 200px; margin-top: 1px;" alt="ray diagrams">
+</div>
+
+<div style=" text-align: left;">
+    <img src="images/lesson-ultrasound-7.png" style=" width: 25%; margin-bottom: 10px;" alt="question mark">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ray-diagrams-6.png" style=" width: 80%; margin-bottom: 200px; margin-top: 1px;" alt="ray diagram text">
+</div>
+
+<div class="wrapper">
+    <h2>Ray diagrams</h2>
+
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>The boundary between two materials.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>interface</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>The law that says the angle of incidence and the angle of reﬂection are equal.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>Law of reflection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>An imaginary line drawn at right angles to the surface of a mirror or lens.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>normal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>The angle between an incoming light ray and the normal.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>angle of incidence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<h3>Total internal reflection</h3>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ray-diagrams-5.png" style=" width: 65%;" alt="total internal reflection diagrams">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ray-diagrams-7.png" style=" width: 25%;" alt="total internal reflection diagrams">
+</div>
+
+<h2 style=" margin-top: 10px; padding-left: 100px; padding-right: 100px; ">This is called <span style="color: red;">total internal reflection</span>.</h2>
+
+<div class="wrapper">
+    <h2 style=" margin-top: 150px;">Total internal reflection</h2>
+
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>When light is reflected inside a glass block.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>total internal reflection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>The angle of incidence above which total internal reflection occurs.</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>critical angle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>Which way does light bend when it goes from air 	to glass?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>towards the normal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="#">
+                    <div class="inner">
+                        <p>Which way does sound wave bend when it goes from air to glass?</p>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner" style=" color: #36013F;">
+                        <p>away from normal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Lic3gCS_bKo?si=E2zF6lNWD3HrzfsD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<h2  style=" margin-top: 10px; margin-bottom: 10px;" >PAST PAPER QUESTION</h2>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ray-diagrams-8.png" style=" width: 70%; margin-bottom: 10px;" alt="PPQ">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ray-diagrams-9.png" style=" width: 40%; margin-bottom: 10px;" alt="PPQ">
+</div>
+
+<div style=" text-align: center;">
+    <img src="images/lesson-ray-diagrams-10.png" style=" width: 70%; margin-bottom: 100px;" alt="PPQ">
+</div>
+
+<a href="files/lesson-ray-diagrams-3-mark-question-answer.pdf" target="_blank" style=" text-decoration: none; text-align: center">Answer</a>
+
+</body>
+</html>
