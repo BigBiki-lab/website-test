@@ -236,3 +236,15 @@ img {
     font-size: 1.6rem;
     }
        }
+
+div.center {
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 300px;
+
+      @media (max-width: 600px) {iframe {
+             width: auto;
+             height: auto;
+        }
+        }
+}
