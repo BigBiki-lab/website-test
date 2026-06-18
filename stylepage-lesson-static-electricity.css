@@ -398,3 +398,13 @@ div.center {
     margin-bottom: 10px;
   }
 }
+
+iframe {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+@media (max-width: 800px) {
+    iframe {
+    width: 100%;
+    }
+   }
