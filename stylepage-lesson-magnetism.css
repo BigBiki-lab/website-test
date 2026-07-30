@@ -226,11 +226,14 @@ h3 {
      }
  }
 h4 {
- text-align: center;
- color: #474973;
- font-size: 40px;
- margin-top: 10px;
- margin-bottom: 500px;
+ text-align: left;
+ color: #2E1A47;
+ font-weight: normal;
+ font-size: 30px;
+ margin-left:50px;
+ margin-right: 50px;
+ margin-top: 5px;
+ margin-bottom: 5px;
  @media (max-width: 800px){
      font-size: 25px;
      }
