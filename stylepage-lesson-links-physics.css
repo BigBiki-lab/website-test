@@ -1,0 +1,19 @@
+body {
+          background-color: #2E1A47;
+          }
+        h1 {
+          color: #FFFFFF;
+          }
+
+        a {
+          text-decoration: none;
+          font-size: 18px;
+          color: #FFFFFF;
+          margin: 20px 0;
+        }
+
+        ul {
+          color: white;
+  <!--        list-style-type: none;-->
+          padding-left: 0;
+        }
