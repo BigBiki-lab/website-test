@@ -23,7 +23,6 @@ const images = [
       "images/background-images/wp2166321-physics-wallpapers.jpg",
       "images/background-images/wp2166315-physics-wallpapers.jpg",
       "images/background-images/wp14819683-physics-wallpapers.jpg",
-      "images/background-images/Fl83heL-astronomy-wallpaper.jpg",
       "images/background-images/wp12560095-physics-equations-wallpapers.jpg",
       "images/background-images/wp12560013-physics-hd-wallpapers.jpg"
     ];
