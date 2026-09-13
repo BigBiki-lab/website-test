@@ -697,6 +697,24 @@
 
 
 <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    // Load saved states
+    checkboxes.forEach(checkbox => {
+        const savedState = localStorage.getItem(checkbox.id);
+
+        if (savedState === 'true') {
+            checkbox.checked = true;
+        }
+
+        // Save state when changed
+        checkbox.addEventListener('change', () => {
+            localStorage.setItem(checkbox.id, checkbox.checked);
+        });
+    });
+</script>
+
+<script>
     function updateOverallProgress() {
 
         // Find every checkbox in all 7 slides
