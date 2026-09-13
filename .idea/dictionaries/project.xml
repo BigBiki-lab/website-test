@@ -2,6 +2,8 @@
   <dictionary name="project">
     <words>
       <w>stylepage</w>
+      <w>tabcontent</w>
+      <w>tablinks</w>
     </words>
   </dictionary>
 </component>
