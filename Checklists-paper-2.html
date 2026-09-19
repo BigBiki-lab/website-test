@@ -20,12 +20,17 @@
 <h2 style="text-align:center">Checklists paper 2</h2>
 
 <div class="container">
+
+    <div class="overall-progress">
+        <span>Overall Progress: </span>
+        <strong id="overallPercentage">0%</strong>
+    </div>
+
     <div class="mySlides">
         <div class="numbertext">1 / 4</div>
         <img src="images/eWL4wLHPH3vLkvttuz54vh.jpg" style="width:100%; height:50vh; object-fit:cover;" alt="rotation">
         <h2>SP8 Energy - Forces Doing Work</h2>
         <h2>SP9 Forces and their Effects</h2>
-        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
         <div class="tab">
             <button class="tablinks" onmouseover="openCity(event, 'SP8a Work and power')">SP8a Work and power</button>
             <button class="tablinks" onmouseover="openCity(event, 'SP9a Objects affecting each other')">SP9a Objects affecting each other</button>
@@ -33,37 +38,92 @@
             <button class="tablinks" onmouseover="openCity(event, 'SP9c Rotational forces')">SP9c Rotational forces</button>
         </div>
         <div id="SP8a Work and power" class="tabcontent">
-            <p>Describe some ways in which the energy of a system can be changed.</p>
-            <p>Measure the work done by a force.</p>
-            <p>Recall and use the equation linking work done, force and distance.</p>
-            <p>Explain what power means.</p>
-            <p>Recall and use the equation linking power, work done and time.</p>
-            <!--            <p><input type="checkbox" name="option1">Explain the difference between a vector and a scalar quantity.</p>-->
-            <!--            <p><input type="checkbox" name="option1">Describe the difference between displacement and distance.</p>-->
-            <!--            <p><input type="checkbox" name="option1">Describe the difference between velocity and speed.</p>-->
-            <!--            <p><input type="checkbox" name="option1">Define the terms: acceleration, force, momentum, energy.</p>-->
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100300" />
+                    <span>Describe some ways in which the energy of a system can be changed.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100301" />
+                    <span>Measure the work done by a force.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100302" />
+                    <span>Recall and use the equation linking work done, force and distance.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100303" />
+                    <span>Explain what power means.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100304" />
+                    <span>Recall and use the equation linking power, work done and time.</span></p>
+            </label>
         </div>
         <div id="SP9a Objects affecting each other" class="tabcontent">
-            <p>Describe the effect of a gravitational field on objects.</p>
-            <p>Describe the effects of magnetic fields on objects.</p>
-            <p>Describe the forces that can occur when objects are in contact with each other.</p>
-            <p>Describe the effects of electrostatic fields on objects.</p>
-            <p>Describe how pairs of forces occur when objects affect each other.</p>
-            <p>Use examples to explain the difference between vector and scalar quantities.</p>
-            <div class="clearfix"></div>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100305" />
+                    <span>Describe the effect of a gravitational field on objects.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100306" />
+                    <span>Describe the effects of magnetic fields on objects.</span></p>
+            </label>
+            <label>
+            <p><input type="checkbox" class="progress-item" id="item100307" />
+                <span>Describe the forces that can occur when objects are in contact with each other.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100308" />
+                    <span>Describe the effects of electrostatic fields on objects.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100309" />
+                    <span>Describe how pairs of forces occur when objects affect each other.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item1003010" />
+                    <span>Use examples to explain the difference between vector and scalar quantities.</span></p>
+            </label>
         </div>
         <div id="SP9b Vector diagrams" class="tabcontent">
-            <p>Describe how to resolve forces.</p>
-            <p>Use scale drawings to work out the net force on an object.</p>
-            <p>Draw free body diagrams to represent the forces on an object.</p>
-            <p>Explain what happens in situations where several forces are acting on an object.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100311" />
+                    <span>Describe how to resolve forces.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100312" />
+                    <span>Use scale drawings to work out the net force on an object.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100313" />
+                    <span>Draw free body diagrams to represent the forces on an object.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100314" />
+                    <span>Explain what happens in situations where several forces are acting on an object.</span></p>
+            </label>
         </div>
         <div id="SP9c Rotational forces" class="tabcontent">
-            <p>Describe situations where forces can cause rotation.</p>
-            <p>Recall and use the equation: moment of a force (newton metre, N m) = force (newton, N) multiplied by distance normal to the direction of the force (metre, m).</p>
-            <p>Use the principle of moments to calculate forces and distances in equilibrium situations.</p>
-            <p>Explain how levers transmit the rotational effects of forces.</p>
-            <p>Explain how gears transmit the rotational effects of forces.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100315" />
+                    <span>Describe situations where forces can cause rotation.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100316" />
+                    <span>Recall and use the equation: moment of a force (newton metre, N m) = force (newton, N) multiplied by distance normal to the direction of the force (metre, m).</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100317" />
+                    <span>Use the principle of moments to calculate forces and distances in equilibrium situations.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100318" />
+                    <span>Explain how levers transmit the rotational effects of forces.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100319" />
+                    <span>Explain how gears transmit the rotational effects of forces.</span></p>
+            </label>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -89,95 +149,289 @@
             <button class="tablinks" onmouseover="openCity(event, 'SP11c Electric fields')">SP11c Electric fields</button>
         </div>
         <div id="SP10a Electric circuits" class="tabcontent">
-            <p>Describe the basic structure of an atom (positions, relative masses and relative charges of protons, neutrons and electrons).</p>
-            <p>Recognise the circuit symbols for a range of common electrical components (cells, including batteries, switches, voltmeters, ammeters and lamps).</p>
-            <p>Draw diagrams for circuits containing common electrical components, using conventions for positive and negative terminals.</p>
-            <p>Describe and explain the difference between the brightness of identical lamps in series and parallel circuits.</p>
-            <p>Describe and explain the effects of different numbers of identical lamps, cells and switches in series and parallel circuits.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100320" />
+                    <span>Describe the basic structure of an atom (positions, relative masses and relative charges of protons, neutrons and electrons).</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100321" />
+                    <span>Recognise the circuit symbols for a range of common electrical components (cells, including batteries, switches, voltmeters, ammeters and lamps).</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100322" />
+                    <span>Draw diagrams for circuits containing common electrical components, using conventions for positive and negative terminals.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100323" />
+                    <span>Describe and explain the difference between the brightness of identical lamps in series and parallel circuits.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100324" />
+                    <span>Describe and explain the effects of different numbers of identical lamps, cells and switches in series and parallel circuits.</span></p>
+            </label>
         </div>
         <div id="SP10b Current and potential difference" class="tabcontent">
-            <p>Describe how to measure voltage.</p>
-            <p>Define the term potential difference.</p>
-            <p>Describe how to measure current.</p>
-            <p>Describe the conditions needed to produce an electric current. (A complete circuit and a source of voltage/potential difference.)</p>
-            <p>Describe the behaviour of current at a junction.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100325" />
+                    <span>Describe how to measure voltage.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100326" />
+                    <span>Define the term potential difference.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item1003027" />
+                    <span>Describe how to measure current.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100328" />
+                    <span>Describe the conditions needed to produce an electric current. (A complete circuit and a source of voltage/potential difference.)</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100329" />
+                    <span>Describe the behaviour of current at a junction.</span></p>
+            </label>
         </div>
         <div id="SP10c Current, charge and energy" class="tabcontent">
-            <p>Explain the link between the potential difference (voltage) across a battery or a component, the charge passing through it and the amount of energy transferred.</p>
-            <p>Recall that the unit of potential difference is the volt and explain it in terms of units of energy and charge (a potential difference of one joule per coulomb).</p>
-            <p>Recall and use the equation to calculate the energy transferred, the charge that flows or the potential difference. (E = Q multiplied by V)</p>
-            <p>Explain the link between electric current and electric charge.</p>
-            <p>Explain electric current in metals in terms of electrons.</p>
-            <p>Recall and use the equation to calculate the charge that flows, the current or the time the current flows. (Q = I multiplied by t )</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100330" />
+                    <span>Explain the link between the potential difference (voltage) across a battery or a component, the charge passing through it and the amount of energy transferred.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100331" />
+                    <span>Recall that the unit of potential difference is the volt and explain it in terms of units of energy and charge (a potential difference of one joule per coulomb).</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100332" />
+                    <span>Recall and use the equation to calculate the energy transferred, the charge that flows or the potential difference. (E = Q multiplied by V)</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100333" />
+                    <span>Explain the link between electric current and electric charge.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100334" />
+                    <span>Explain electric current in metals in terms of electrons.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100335" />
+                    <span>Recall and use the equation to calculate the charge that flows, the current or the time the current flows. (Q = I multiplied by t )</span></p>
+            </label>
         </div>
         <div id="SP10d Resistance" class="tabcontent">
-            <p>Explain the link between resistance and current in a circuit.</p>
-            <p>Define the resistance of a component or circuit (R = V/I).</p>
-            <p>Recall and use the equation to calculate the potential difference, the current or the resistance (V = I multiplied by R).</p>
-            <p>Explain the difference in resistance when two resistors are connected in series or in parallel.</p>
-            <p>Calculate the currents, potential differences and resistances in series circuits.</p>
-            <p>Explain the design and construction of series circuits for testing and measuring.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100336" />
+                    <span>Explain the link between resistance and current in a circuit.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100337" />
+                    <span>Define the resistance of a component or circuit (R = V/I).</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100338" />
+                    <span>Recall and use the equation to calculate the potential difference, the current or the resistance (V = I multiplied by R).</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100339" />
+                    <span>Explain the difference in resistance when two resistors are connected in series or in parallel.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100340" />
+                    <span>Calculate the currents, potential differences and resistances in series circuits.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100341" />
+                    <span>Explain the design and construction of series circuits for testing and measuring.</span></p>
+            </label>
         </div>
         <div id="SP10e More about resistance" class="tabcontent">
-            <p>Explain how current changes with potential difference in fixed resistors.</p>
-            <p>Explain how current and resistance change with potential difference in filament lamps.</p>
-            <p>Explain how current and resistance change with potential difference in diodes, including light-emitting diodes (LEDs).</p>
-            <p>Describe how the resistance of a light-dependent resistor (LDR) varies with changing light intensity.</p>
-            <p>Describe how the resistance of a thermistor varies with changing temperature. (negative temperature coefficient only)</p>
-            <p>Describe the uses of diodes, LDRs and thermistors.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100342" />
+                    <span>Explain how current changes with potential difference in fixed resistors.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100343" />
+                    <span>Explain how current and resistance change with potential difference in filament lamps.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100344" />
+                    <span>Explain how current and resistance change with potential difference in diodes, including light-emitting diodes (LEDs).</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100345" />
+                    <span>Describe how the resistance of a light-dependent resistor (LDR) varies with changing light intensity.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100346" />
+                    <span>Describe how the resistance of a thermistor varies with changing temperature. (negative temperature coefficient only)</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100347" />
+                    <span>Describe the uses of diodes, LDRs and thermistors.</span></p>
+            </label>
         </div>
         <div id="SP10f Transferring energy" class="tabcontent">
-            <p>Describe the energy transfer that occurs when a current passes through a resistor.</p>
-            <p>Use the electron and ion model and the idea of electrical work to explain the energy transfer in a resistor and the resulting dissipation of energy in the surroundings.</p>
-            <p>H Explain how unwanted energy transfers in wires can be avoided.</p>
-            <p>Recall the advantages of the heating effect of an electric current.</p>
-            <p>Recall the disadvantages of the heating effect of an electric current.</p>
-            <p>Use the equation E = I multiplied by V and t to calculate the energy transferred, the current, the potential difference or the time.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100348" />
+                    <span>Describe the energy transfer that occurs when a current passes through a resistor.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100349" />
+                    <span>Use the electron and ion model and the idea of electrical work to explain the energy transfer in a resistor and the resulting dissipation of energy in the surroundings.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100350" />
+                    <span>H Explain how unwanted energy transfers in wires can be avoided.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100351" />
+                    <span>Recall the advantages of the heating effect of an electric current.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100352" />
+                    <span>Recall the disadvantages of the heating effect of an electric current.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100353" />
+                    <span>Use the equation E = I multiplied by V and t to calculate the energy transferred, the current, the potential difference or the time.</span></p>
+            </label>
         </div>
         <div id="SP10g Power" class="tabcontent">
-            <p>Define power and the units used to measure it. (energy transferred per second in watts)</p>
-            <p>Recall and use the equation to calculate the power, the energy transferred or the time taken. (P = E/t)</p>
-            <p>Explain how power transfer depends on the potential difference across a device and the current through it.</p>
-            <p>Recall and use the equation to calculate the electrical power, the current or the potential difference. (P = I multiplied by V)</p>
-            <p>Recall and use the equation to calculate the electrical power, the current or the resistance. (P = I squared and multiplied by R)</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100354" />
+                    <span>Define power and the units used to measure it. (energy transferred per second in watts)</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100355" />
+                    <span>Recall and use the equation to calculate the power, the energy transferred or the time taken. (P = E/t)</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100356" />
+                    <span>Explain how power transfer depends on the potential difference across a device and the current through it.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100357" />
+                    <span>Recall and use the equation to calculate the electrical power, the current or the potential difference. (P = I multiplied by V)</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100358" />
+                    <span>Recall and use the equation to calculate the electrical power, the current or the resistance. (P = I squared and multiplied by R)</span></p>
+            </label>
         </div>
         <div id="SP10h Transferring energy by electricity" class="tabcontent">
-            <p>Describe energy transfers from d.c. batteries and the a.c. mains supply to motors and heaters.</p>
-            <p>Explain the difference between direct and alternating voltage.</p>
-            <p>Compare alternating and direct current (in terms of movement of charge).</p>
-            <p>Recall the frequency and voltage of the UK domestic supply.</p>
-            <p>Describe the power ratings of some domestic electrical appliances and changes in stored energy when they are in use.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100359" />
+                    <span>Describe energy transfers from d.c. batteries and the a.c. mains supply to motors and heaters.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100360" />
+                    <span>Explain the difference between direct and alternating voltage.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100361" />
+                    <span>Compare alternating and direct current (in terms of movement of charge).</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100362" />
+                    <span>Recall the frequency and voltage of the UK domestic supply.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100363" />
+                    <span>Describe the power ratings of some domestic electrical appliances and changes in stored energy when they are in use.</span></p>
+            </label>
         </div>
         <div id="SP10i Electrical safety" class="tabcontent">
-            <p>Explain the difference between the functions of the live and the neutral wires.</p>
-            <p>Explain how circuit breakers make circuits safer.</p>
-            <p>Explain how the earth wire and the fuse make circuits safer.</p>
-            <p>Explain why switches and fuses are connected in the live wire.</p>
-            <p>Recall the potential differences between the live, neutral and earth wires.</p>
-            <p>Explain the danger of a connection between the live wire and earth.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100364" />
+                    <span>Explain the difference between the functions of the live and the neutral wires.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100365" />
+                    <span>Explain how circuit breakers make circuits safer.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100366" />
+                    <span>Explain how the earth wire and the fuse make circuits safer.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100367" />
+                    <span>Explain why switches and fuses are connected in the live wire.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100368" />
+                    <span>Recall the potential differences between the live, neutral and earth wires.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100369" />
+                    <span>Explain the danger of a connection between the live wire and earth.</span></p>
+            </label>
         </div>
         <div id="SP11a Charges and static electricity" class="tabcontent">
-            <p>Explain how rubbing an insulator transfers electrons.</p>
-            <p>Recall the charged particles found in an atom.</p>
-            <p>Explain why, when certain materials are rubbed together, they end up with opposite charges.</p>
-            <p>Recall the rules of attraction and repulsion between charges.</p>
-            <p>Explain how attraction by induction occurs.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100370" />
+                    <span>Explain how rubbing an insulator transfers electrons.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100371" />
+                    <span>Recall the charged particles found in an atom.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100372" />
+                    <span>Explain why, when certain materials are rubbed together, they end up with opposite charges.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100373" />
+                    <span>Recall the rules of attraction and repulsion between charges.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100374" />
+                    <span>Explain how attraction by induction occurs.</span></p>
+            </label>
         </div>
         <div id="SP11b Dangers and uses of static electricity" class="tabcontent">
-            <p>Describe what earthing is.</p>
-            <p>Explain how earthing works.</p>
-            <p>Explain how lightning occurs and why we sometimes get shocks from everyday objects.</p>
-            <p>Explain how electrostatic sprayers work.</p>
-            <p>Describe some hazards caused by charged objects discharging, and how earthing can be used to reduce risks.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100375" />
+                    <span>Describe what earthing is.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100376" />
+                    <span>Explain how earthing works.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100377" />
+                    <span>Explain how lightning occurs and why we sometimes get shocks from everyday objects.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100378" />
+                    <span>Explain how electrostatic sprayers work.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100379" />
+                    <span>Describe some hazards caused by charged objects discharging, and how earthing can be used to reduce risks.</span></p>
+            </label>
         </div>
         <div id="SP11c Electric fields" class="tabcontent">
-            <p>Recall what an electric field is.</p>
-            <p>Recall how the direction of an electric field is defined.</p>
-            <p>Interpret information shown by field lines.</p>
-            <p>Describe the shape and direction of the electric field around a point charge and between charged electrical plates.</p>
-            <p>Explain how static electricity effects can be explained using the idea of an electric field.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100380" />
+                    <span>Recall what an electric field is.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100381" />
+                    <span>Recall how the direction of an electric field is defined.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100382" />
+                    <span>Interpret information shown by field lines.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100383" />
+                    <span>Describe the shape and direction of the electric field around a point charge and between charged electrical plates.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100384" />
+                    <span>Explain how static electricity effects can be explained using the idea of an electric field.</span></p>
+            </label>
         </div>
-
             <div class="clearfix"></div>
     </div>
 
@@ -197,49 +451,148 @@
             <button class="tablinks" onmouseover="openCity(event, 'SP13c Transformers and energy')">SP13c Transformers and energy</button>
         </div>
         <div id="SP12a Magnets and magnetic fields" class="tabcontent">
-            <p>Describe how magnets affect each other.</p>
-            <p>Explain the difference between permanent and induced magnets.</p>
-            <p>Describe the uses of permanent and temporary magnetic materials.</p>
-            <p>Describe the shapes of magnetic fields, including variations in strength.</p>
-            <p>Describe how the shape of magnetic fields can be shown using plotting compasses.</p>
-            <p>Explain how a magnetic compass can be used as evidence for the Earth s magnetic core.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100385" />
+                    <span>Describe how magnets affect each other.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100386" />
+                    <span>Explain the difference between permanent and induced magnets.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100387" />
+                    <span>Describe the uses of permanent and temporary magnetic materials.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100388" />
+                    <span>Describe the shapes of magnetic fields, including variations in strength.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100389" />
+                    <span>Describe how the shape of magnetic fields can be shown using plotting compasses.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100390" />
+                    <span>Explain how a magnetic compass can be used as evidence for the Earth s magnetic core.</span></p>
+            </label>
         </div>
         <div id="SP12b Electromagnetism" class="tabcontent">
-            <p>Recall that a current can create a magnetic effect.</p>
-            <p>Relate the shape and direction of the magnetic field around a straight wire to the direction of the current.</p>
-            <p>Recall the factors that affect the strength of the magnetic field around a wire.</p>
-            <p>Describe the magnetic field inside and outside a coil of wire carrying a current.</p>
-            <p>Explain the shape and strength of the magnetic field around a solenoid.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100391" />
+                    <span>Recall that a current can create a magnetic effect.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100392" />
+                    <span>Relate the shape and direction of the magnetic field around a straight wire to the direction of the current.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100393" />
+                    <span>Recall the factors that affect the strength of the magnetic field around a wire.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100394" />
+                    <span>Describe the magnetic field inside and outside a coil of wire carrying a current.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100395" />
+                    <span>Explain the shape and strength of the magnetic field around a solenoid.</span></p>
+            </label>
         </div>
         <div id="SP12c Magnetic forces" class="tabcontent">
-            <p>H Recall that forces are produced when a current flows in a magnetic field.</p>
-            <p>H Explain what causes the forces produced when a current flows in a magnetic field.</p>
-            <p>H Recall Fleming s left-hand rule.</p>
-            <p>H Use Fleming s left-hand rule.</p>
-            <p>H Use the formula relating force, magnetic field strength, current and length.</p>
-            <p>H Explain how the force on a conductor in a magnetic field is used to cause rotation in electric motors.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100396" />
+                    <span>H Recall that forces are produced when a current flows in a magnetic field.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100397" />
+                    <span>H Explain what causes the forces produced when a current flows in a magnetic field.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100398" />
+                    <span>H Recall Fleming s left-hand rule.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100399" />
+                    <span>H Use Fleming s left-hand rule.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100400" />
+                    <span>H Use the formula relating force, magnetic field strength, current and length.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100401" />
+                    <span>H Explain how the force on a conductor in a magnetic field is used to cause rotation in electric motors.</span></p>
+            </label>
         </div>
         <div id="SP13a Electromagnetic induction" class="tabcontent">
-            <p>H Describe how to produce an electric current by induction on a small scale.</p>
-            <p>H Describe how electromagnetic induction is used in alternators and dynamos.</p>
-            <p>H Describe how different factors affect the size and direction of an induced current.</p>
-            <p>H Describe how the magnetic field produced by an induced potential difference opposes the original change.</p>
-            <p>H Explain how microphones work in terms of changing pressure variations into variations in electric current.</p>
-            <p>H Explain how loudspeakers change variations in current to variations in air pressure.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100402" />
+                    <span>H Describe how to produce an electric current by induction on a small scale.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100403" />
+                    <span>H Describe how electromagnetic induction is used in alternators and dynamos.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100404" />
+                    <span>H Describe how different factors affect the size and direction of an induced current.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100405" />
+                    <span>H Describe how the magnetic field produced by an induced potential difference opposes the original change.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100406" />
+                    <span>H Explain how microphones work in terms of changing pressure variations into variations in electric current.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100407" />
+                    <span>H Explain how loudspeakers change variations in current to variations in air pressure.</span></p>
+            </label>
         </div>
         <div id="SP13b The National grid" class="tabcontent">
-            <p>H Explain how a transformer works.</p>
-            <p>H Recall that transformers can change the voltage of an alternating current.</p>
-            <p>H Use the turns ratio equation for transformers.</p>
-            <p>Describe how the national grid transmits electricity around the country.</p>
-            <p>Explain why step-up and step-down transformers are used in the national grid.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100408" />
+                    <span>H Explain how a transformer works.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100409" />
+                    <span>H Recall that transformers can change the voltage of an alternating current.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100410" />
+                    <span>H Use the turns ratio equation for transformers.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100411" />
+                    <span>Describe how the national grid transmits electricity around the country.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100412" />
+                    <span>Explain why step-up and step-down transformers are used in the national grid.</span></p>
+            </label>
         </div>
         <div id="SP13c Transformers and energy" class="tabcontent">
-            <p>Recall the law of conservation of energy.</p>
-            <p>Recall that the power of an electric current is given by the current multiplied by the voltage.</p>
-            <p>Use the power equation for transformers.</p>
-            <p>H Recall and use equations relating current, voltage, power and resistance.</p>
-            <p>H Use equations to explain the advantages of power transmission in high-voltage cables.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100413" />
+                    <span>Recall the law of conservation of energy.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100414" />
+                    <span>Recall that the power of an electric current is given by the current multiplied by the voltage.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100415" />
+                    <span>Use the power equation for transformers.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100416" />
+                    <span>H Recall and use equations relating current, voltage, power and resistance.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100417" />
+                    <span>H Use equations to explain the advantages of power transmission in high-voltage cables.</span></p>
+            </label>
         </div>
 
             <div class="clearfix"></div>
@@ -264,69 +617,210 @@
             <button class="tablinks" onmouseover="openCity(event, 'SP15d Pressure and upthrust')">SP15d Pressure and upthrust</button>
         </div>
         <div id="SP14a Particles and density" class="tabcontent">
-            <p>Describe the arrangements of particles in solids, liquids and gases.</p>
-            <p>Use the particle model to explain the different properties of solids, liquids and gases.</p>
-            <p>Recall the formula relating density, mass and volume.</p>
-            <p>Use the formula relating density, mass and volume.</p>
-            <p>Use the particle model to explain why solids, liquids and gases have different densities.</p>
-            <p>Describe what happens to the mass of a substance when it changes state.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100418" />
+                    <span>Describe the arrangements of particles in solids, liquids and gases.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100419" />
+                    <span>Use the particle model to explain the different properties of solids, liquids and gases.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100420" />
+                    <span>Recall the formula relating density, mass and volume.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100421" />
+                    <span>Use the formula relating density, mass and volume.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100422" />
+                    <span>Use the particle model to explain why solids, liquids and gases have different densities.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100423" />
+                    <span>Describe what happens to the mass of a substance when it changes state.</span></p>
+            </label>
         </div>
         <div id="SP14b Energy and changes of state" class="tabcontent">
-            <p>Explain how heating affects the particles in a substance or object, including changes of state.</p>
-            <p>Describe how the temperature of an object changes with time while being heated or cooled to make it change state.</p>
-            <p>Define the term specific heat capacity.</p>
-            <p>Define the term specific latent heat.</p>
-            <p>Explain the difference between specific heat capacity and specific latent heat.</p>
-            <p>Explain ways of reducing unwanted energy transfer through thermal insulation.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100424" />
+                    <span>Explain how heating affects the particles in a substance or object, including changes of state.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100425" />
+                    <span>Describe how the temperature of an object changes with time while being heated or cooled to make it change state.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100426" />
+                    <span>Define the term specific heat capacity.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100427" />
+                    <span>Define the term specific latent heat.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100428" />
+                    <span>Explain the difference between specific heat capacity and specific latent heat.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100429" />
+                    <span>Explain ways of reducing unwanted energy transfer through thermal insulation.</span></p>
+            </label>
         </div>
         <div id="SP14c Energy calculations" class="tabcontent">
-            <p>Use the formula relating change in thermal energy, mass, temperature change and specific heat capacity.</p>
-            <p>Use the formula relating thermal energy, mass and specific latent heat.</p>
-            <p>Recall that the value of specific latent</p>
-            <p>Recall that the value of specific latent heat for a substance is different for melting/solidifying and for evaporating/condensing.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100430" />
+                    <span>Use the formula relating change in thermal energy, mass, temperature change and specific heat capacity.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100431" />
+                    <span>Use the formula relating thermal energy, mass and specific latent heat.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100432" />
+                    <span>Recall that the value of specific latent.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100433" />
+                    <span>Recall that the value of specific latent heat for a substance is different for melting/solidifying and for evaporating/condensing.</span></p>
+            </label>
         </div>
         <div id="SP14d Gas temperature and pressure" class="tabcontent">
-            <p>Explain how the movement of particles causes gas pressure.</p>
-            <p>Explain how changing the temperature of a gas affects the speed of its particles.</p>
-            <p>Explain how temperature affects the pressure of a fixed mass of gas at constant volume.</p>
-            <p>Explain the significance of absolute zero.</p>
-            <p>Convert temperatures between the Kelvin and Celsius temperature scales.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100434" />
+                    <span>Explain how the movement of particles causes gas pressure.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100435" />
+                    <span>Explain how changing the temperature of a gas affects the speed of its particles.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100436" />
+                    <span>Explain how temperature affects the pressure of a fixed mass of gas at constant volume.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100437" />
+                    <span>Explain the significance of absolute zero.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100438" />
+                    <span>Convert temperatures between the Kelvin and Celsius temperature scales.</span></p>
+            </label>
         </div>
         <div id="SP14e Gas pressure and volume" class="tabcontent">
-            <p>Explain how gases can be compressed or expanded by pressure changes.</p>
-            <p>Explain how the pressure of a gas produces a force at right angles to any surface.</p>
-            <p>Explain why changing the volume of a gas changes the pressure.</p>
-            <p>Use the formula relating pressure and volume changes in a gas of fixed mass at constant temperature.</p>
-            <p>H Explain why doing work on a gas can increase its temperature.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100439" />
+                    <span>Explain how gases can be compressed or expanded by pressure changes.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100440" />
+                    <span>Explain how the pressure of a gas produces a force at right angles to any surface.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100441" />
+                    <span>Explain why changing the volume of a gas changes the pressure.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100442" />
+                    <span>Use the formula relating pressure and volume changes in a gas of fixed mass at constant temperature.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100443" />
+                    <span>H Explain why doing work on a gas can increase its temperature.</span></p>
+            </label>
         </div>
         <div id="SP15a Bending and stretching" class="tabcontent">
-            <p>Explain that more than one force is needed to distort an object.</p>
-            <p>Describe the difference between elastic and inelastic distortion.</p>
-            <p>Describe the relationship between force and extension for a spring.</p>
-            <p>Describe the relationship between force and extension for a rubber band.</p>
-            <p>Compare the force extension relationship for different objects.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100444" />
+                    <span>Explain that more than one force is needed to distort an object.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100445" />
+                    <span>Describe the difference between elastic and inelastic distortion.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100446" />
+                    <span>Describe the relationship between force and extension for a spring.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100447" />
+                    <span>Describe the relationship between force and extension for a rubber band.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100448" />
+                    <span>Compare the force extension relationship for different objects.</span></p>
+            </label>
         </div>
         <div id="SP15b Extension and energy transfers" class="tabcontent">
-            <p>Recall the equation that links force, extension and the spring constant.</p>
-            <p>Use the formula relating force, extension and spring constant.</p>
-            <p>Recall that work has to be done to stretch a spring.</p>
-            <p>Use the formula relating the energy transferred to the extension of a spring.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100449" />
+                    <span>Recall the equation that links force, extension and the spring constant.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100450" />
+                    <span>Use the formula relating force, extension and spring constant.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100451" />
+                    <span>Recall that work has to be done to stretch a spring.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100452" />
+                    <span>Use the formula relating the energy transferred to the extension of a spring.</span></p>
+            </label>
         </div>
         <div id="SP15c Pressure in fluids" class="tabcontent">
-            <p>Use a model of the Earth’s atmosphere to explain why pressure varies with height.</p>
-            <p>Describe the pressure in a fluid as being due to the fluid and atmospheric pressure.</p>
-            <p>Explain how pressure is related to area and a force normal to the surface.</p>
-            <p>Recall the formula relating force, pressure and area.</p>
-            <p>Use the formula relating force, pressure and area.</p>
-            <p>Describe how pressure in fluids increases with depth and density.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100453" />
+                    <span>Use a model of the Earth’s atmosphere to explain why pressure varies with height.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100454" />
+                    <span>Describe the pressure in a fluid as being due to the fluid and atmospheric pressure.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100455" />
+                    <span>Explain how pressure is related to area and a force normal to the surface.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100456" />
+                    <span>Recall the formula relating force, pressure and area.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100457" />
+                    <span>Use the formula relating force, pressure and area.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100458" />
+                    <span>Describe how pressure in fluids increases with depth and density.</span></p>
+            </label>
         </div>
         <div id="SP15d Pressure and upthrust" class="tabcontent">
-            <p>H Explain why the pressure in a liquid depends on density and depth.</p>
-            <p>H Use the equation relating pressure in a fluid to height, density and gravitational field strength.</p>
-            <p>H Explain how upthrust occurs.</p>
-            <p>H Relate the upthrust to the floating or sinking of objects immersed or partially immersed in fluids.</p>
-            <p>H Recall that the upthrust is equal to the weight of fluid displaced.</p>
-            <p>H Explain the factors that determine whether or not an object will float or sink.</p>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100459" />
+                    <span>H Explain why the pressure in a liquid depends on density and depth.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100460" />
+                    <span>H Use the equation relating pressure in a fluid to height, density and gravitational field strength.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100461" />
+                    <span>H Explain how upthrust occurs.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100462" />
+                    <span>H Relate the upthrust to the floating or sinking of objects immersed or partially immersed in fluids.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100463" />
+                    <span>H Recall that the upthrust is equal to the weight of fluid displaced.</span></p>
+            </label>
+            <label>
+                <p><input type="checkbox" class="progress-item" id="item100464" />
+                    <span>H Explain the factors that determine whether or not an object will float or sink.</span></p>
+            </label>
         </div>
             <div class="clearfix"></div>
     </div>
@@ -398,5 +892,63 @@
           evt.currentTarget.className += " active";
     }
 </script>
+
+<script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    // Load saved states
+    checkboxes.forEach(checkbox => {
+        const savedState = localStorage.getItem(checkbox.id);
+
+        if (savedState === 'true') {
+            checkbox.checked = true;
+        }
+
+        // Save state when changed
+        checkbox.addEventListener('change', () => {
+            localStorage.setItem(checkbox.id, checkbox.checked);
+        });
+    });
+</script>
+
+<script>
+    function updateOverallProgress() {
+
+        // Find every checkbox in all 7 slides
+        const checkboxes = document.querySelectorAll(".progress-item");
+
+        // Count checked boxes
+        const checked = document.querySelectorAll(".progress-item:checked").length;
+
+        // Total number of boxes
+        const total = checkboxes.length;
+
+        // Calculate percentage
+        let percentage = 0;
+
+        if (total > 0) {
+            percentage = Math.round((checked / total) * 100);
+        }
+
+        // Display percentage
+        document.getElementById("overallPercentage").textContent =
+            percentage + "%";
+    }
+
+
+    // Update percentage whenever a checkbox is ticked/unticked
+    document.addEventListener("change", function(event) {
+
+        if (event.target.classList.contains("progress-item")) {
+            updateOverallProgress();
+        }
+
+    });
+
+
+    // Set initial percentage
+    updateOverallProgress();
+</script>
+
 </body>
 </html>

@@ -151,3 +151,23 @@ body {
           clear: both;
           display: table;
         }
+
+        .overall-progress {
+                    position: fixed;
+                    right: 20px;
+                    top: 20px;
+                    z-index: 1000;
+                    background: white;
+                    padding: 15px 20px;
+                    border-radius: 12px;
+                    font-size: 24px;
+                    color: green;
+                    font-weight: bold;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+                }
+
+                #overallPercentage {
+                    font-size: 36px;
+                    color: green;
+                    font-weight: bold;
+                }
