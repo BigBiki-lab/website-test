@@ -166,8 +166,8 @@ body {
                     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
                 }
 
-                #overallPercentage {
-                    font-size: 36px;
-                    color: green;
-                    font-weight: bold;
-                }
+        #overallPercentage {
+            font-size: 36px;
+            color: green;
+            font-weight: bold;
+        }
