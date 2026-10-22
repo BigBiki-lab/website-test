@@ -65,3 +65,70 @@ body {
           display: block;
         }
 
+h5 {
+                text-align: center;
+                color: #4E5180;
+                font-size: 25px;
+                margin-top: 1px;
+                margin-bottom: 1px;
+}
+h6 {
+                text-align: center;
+                color: #4E5180;
+                font-size: 30px;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                }
+
+.exam-dates{
+                         height: 30vh;
+                         display: flex;
+                         flex-direction: column;
+                         gap: 10%;
+                         margin: 1rem;
+                         margin-bottom: 20px;
+                         margin-top: 10vh;
+                         }
+
+                       p {
+                         text-align: center;
+                         color: #810541;
+                         font-size: 50px;
+                         margin-top: 0px;
+                         margin: 0;
+                         @media (max-width: 800px){
+                             font-size: 28px;
+                             }
+                         }
+                       h2 {
+                         color: #474973;
+                         text-align: center;
+                         font-size: 60px;
+                         font-weight: 800;
+                         margin: 0;
+                         @media (max-width: 800px){
+                             font-size: 40px;
+                             }
+                         }
+                       h1 {
+                         color: #474973;
+                         font-size: 25px;
+                         margin: 0;
+                         margin-top: 1rem;
+                         @media (max-width: 800px){
+                             font-size: 18px;
+                             }
+                         }
+                       h3 {
+                         text-align: center;
+                         color: #474973;
+                         font-size: 20px;
+                         margin: 0;
+                         }
+                       h4 {
+                         text-align: center;
+                         color: #FF0000;
+                         font-size: 35px;
+                         margin: 0;
+                         }
+
